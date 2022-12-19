@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        padding: 0.5rem;
+        background: #0369a1;
+      }
+      .heading {
+        font-size: 2rem;
+        text-align: center;
+        font-style: italic;
+      }
+
+      .block {
+        margin: auto;
+        padding: 1rem;
+        max-width: 600px;
+      }
+      .input-text {
+        display: block;
+        margin: 1rem;
+        width: 600px;
+      }
+      .btn {
+        position: relative;
+        left: 1rem;
+        background: #0284c7;
+        border-radius: 1rem;
+        border: none;
+        width: 25%;
+        padding: 2%;
+        font-style: italic;
+        transition: 0.1s ease-in-out;
+      }
+      .btn:hover {
+        background: #0ea5e9;
+      }
+      .label-ouput {
+        padding: 1rem;
+        font-size: 1.5rem;
+        font-style: italic;
+      }
+      .output-text {
+        position: relative;
+        bottom: 1rem;
+        display: block;
+        margin: 1rem;
+        width: 600px;
+        height: 200px;
+        border: 2px solid black;
+      }
+      .container-footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 1rem;
+        background: #0369a1;
+      }
+      .para {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container">
+      <h1 class="heading">Morse Code</h1>
+    </header>
+
+    <section class="block">
+      <textarea
+        name="text"
+        id="inner-text"
+        cols="30"
+        rows="10"
+        class="input-text"
+      ></textarea>
+
+      <button id="tick" class="btn">Convert</button>
+
+      <div class="label-ouput">Converted Morse code below</div>
+
+      <div id="translatedtext" class="output-text"></div>
+    </section>
+
+    <footer class="container-footer">
+      <h1 class="heading">About</h1>
+      <p class="para block">
+        Above is a translater, To convert normal text into morse code Morse code
+        is all about period and underscore.
+      </p>
+    </footer>
+
+    <script src="app.js" type="text/javascript"></script>
+  </body>
+</html>
